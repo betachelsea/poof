@@ -1,0 +1,7 @@
+<% @page_title = "新規作成" %>
+<h1><%= @page_title %></h1>
+<%= form_for @message do |form| %>
+    メッセージを入力：<%= form.text_field :message %>
+    <p><%= form.submit %></p>
+<% end %>
+

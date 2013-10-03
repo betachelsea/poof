@@ -5,7 +5,9 @@ class MessagesController < ApplicationController
     def show
     end
 
+    # 新規作成フォーム
     def new
+        @message = Message.new(message: "test")
     end
 
     def edit
