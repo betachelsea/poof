@@ -1,3 +1,7 @@
 <% @page_title = "結果表示" %>
 <h1><%= @page_title %></h1>
-<p>保存できました</p>
+<p>本文：<%= @message.message %></p>
+<p>制限時間[s]：<%= @message.limit %></p>
+<p>開封時間：<%= @message.opendate %></p>
+<p>レコード作成時間：<%= @message.created_at %></p>
+<p>レコード更新時間：<%= @message.updated_at %></p>
