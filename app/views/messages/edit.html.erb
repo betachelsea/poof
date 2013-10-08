@@ -1,0 +1,8 @@
+<% @page_title = "編集" %>
+<h1><%= @page_title %></h1>
+<%= form_for @message do |form| %>
+    <p>メッセージを入力：<%= form.text_field :message %></p>
+    <p>制限時間入力：<%= form.number_field :limit %></p>
+    <p><%= form.submit %></p>
+<% end %>
+

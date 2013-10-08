@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
     end
 
     def edit
+        @message = Message.find(params[:id])
     end
 
     def create
@@ -19,7 +20,7 @@ class MessagesController < ApplicationController
                                  .permit(:message, :limit)
         @message = Message.new(permitted_params);
         if @message.save
-            redirect_to @message, notice: "メッセージを登録しました。"
+            redirect_to edit_message_path(@message)
         else
             render "new"
         end
