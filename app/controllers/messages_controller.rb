@@ -15,9 +15,9 @@ class MessagesController < ApplicationController
     end
 
     def create
-        @message = Message.new(message: 'testだ！',
-                              limit: 60,
-                              opendate: '2013-10-03')
+        permitted_params = params.require(:message)
+                                 .permit(:message, :limit, :opendate)
+        @message = Message.new(permitted_params);
         if @message.save
             redirect_to @message, notice: "メッセージを登録しました。"
         else
