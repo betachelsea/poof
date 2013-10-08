@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20130930234900) do
   create_table "messages", force: true do |t|
     t.string   "message",    null: false
     t.integer  "limit",      null: false
-    t.datetime "opendate",   null: false
+    t.datetime "opendate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
