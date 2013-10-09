@@ -4,6 +4,12 @@ class MessagesController < ApplicationController
 
     def show
         @message = Message.find(params[:id])
+        @message.assign_attributes(opendate: Time.now)
+        if @message.save
+            @message
+        else
+            render "index"
+        end
     end
 
     # 新規作成フォーム
