@@ -8,7 +8,8 @@ $(function() {
         setInterval(function() {
             num = num-1;
             if (num < 0) {
-                location.replace('/');
+                var delNumber = $("#countdown").attr("data-id");
+                location.replace('/message/delete/'+delNumber);
             } else {
                 $("#countdown").text(num);
             }

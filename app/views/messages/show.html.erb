@@ -1,7 +1,9 @@
 <% @page_title = "結果表示" %>
 <h1><%= @page_title %></h1>
 残り時間↓
-<p id="countdown" data-time="<%= @message.limit %>"></p>
+<p id="countdown"
+    data-time="<%= @message.limit %>"
+    data-id="<%= @message.id %>"></p>
 
 <p>本文：<%= @message.message %></p>
 <p>制限時間[s]：<%= @message.limit %></p>
