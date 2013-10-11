@@ -36,6 +36,9 @@ class MessagesController < ApplicationController
     end
 
     def destroy
+        @message = Message.find(params[:id])
+        @message.destroy
+        redirect_to :messages, notice: "メッセージを削除しました。"
     end
 
 end

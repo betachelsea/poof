@@ -7,3 +7,5 @@
 <p>レコード更新時間：<%= @message.updated_at %></p>
 
 <%= link_to "トップページへ", :controller => "messages", :action => "index" %>
+<%= link_to "削除する", @message, method: :delete, confirm: "本当に削除しますか？" %>
+
