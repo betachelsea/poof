@@ -1,0 +1,8 @@
+<% @page_title = "ワンクッションページ" %>
+<h1><%= @page_title %></h1>
+<p>
+    あなたにメッセージが届いています<br />
+    なお、閲覧後メッセージは<%= @message.limit %>秒で自動的に消去されます
+</p>
+<%= link_to "開ける！", message_path(@message.id) %>
+

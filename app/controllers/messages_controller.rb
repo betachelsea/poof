@@ -2,6 +2,10 @@ class MessagesController < ApplicationController
     def index
     end
 
+    def deliver
+        @message = Message.find(params[:id])
+    end
+
     def show
         @message = Message.find(params[:id])
         @message.assign_attributes(opendate: Time.now)
