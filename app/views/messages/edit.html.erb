@@ -6,4 +6,5 @@
     <p><%= form.submit %></p>
 <% end %>
 
-<%= link_to "閲覧する！", message_path(@message.id) %>
+<%= link_to "送信封筒URLを確認する", :controller => "messages", :action => "deliver" %>
+
